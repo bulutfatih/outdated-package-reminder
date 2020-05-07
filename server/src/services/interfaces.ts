@@ -1,4 +1,6 @@
-export interface IReminder {
+import mongoose from "mongoose";
+
+export interface IReminder extends mongoose.Document {
   email: string;
   namespace: string;
   repository: string;
