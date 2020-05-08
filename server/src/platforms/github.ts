@@ -1,15 +1,12 @@
-import axios from "axios";
-import { BasePlatform } from "./basePlatform";
+import axios from 'axios';
+import { BasePlatform } from './basePlatform';
 
 export class Github extends BasePlatform {
-  async getPackageJson(
-    namespace: string,
-    repository: string
-  ): Promise<Array<[string, string]>> {
+  async getPackageJson(namespace: string, repository: string): Promise<Array<[string, string]>> {
     // get package.json file and return dependencies
     try {
       const result = await axios.get(
-        `https://raw.githubusercontent.com/${namespace}/${repository}/master/package.json`
+        `https://raw.githubusercontent.com/${namespace}/${repository}/master/package.json`,
       );
 
       const dependencies = result.data.dependencies;
@@ -24,10 +21,7 @@ export class Github extends BasePlatform {
     }
   }
 
-  async getComposerJson(
-    namespace: string,
-    repository: string
-  ): Promise<Array<[string, string]>> {
+  async getComposerJson(namespace: string, repository: string): Promise<Array<[string, string]>> {
     // get composer.json file
 
     // THIS IS NOT IMPLEMENTED YET
