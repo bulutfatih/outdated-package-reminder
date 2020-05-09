@@ -26,7 +26,7 @@ export class API {
   // @route   GET /:platform/:namespace/:repository
   // @desc    Check a repository
   // @access  Public
-  repo(req: Request, res: Response) {
+  async repo(req: Request, res: Response) {
     console.log(req.params);
     res.status(200).send('repo service.');
   }
