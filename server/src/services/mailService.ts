@@ -10,7 +10,7 @@ export class MailService {
 
     const remindersToCheck = reminders.filter((item) => {
       const date = new Date(item.date);
-      const reminderTime = date.getHours() + ':' + date.getHours();
+      const reminderTime = date.getHours() + ':' + date.getMinutes();
 
       if (reminderTime === currentTime) return item;
     });
