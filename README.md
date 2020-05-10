@@ -1,6 +1,6 @@
 # Outdated Package Reminder
 
-This project finds outdated packages in your repository and reminds your via email. You can set a reminder for your each projects and be up-to-date with everyday check-ups.
+This project finds outdated packages in your repository and reminds you via email. You can set a reminder for your each projects and be up-to-date with everyday check-ups.
 
   - Check packages in your repository
   - Set a daily reminder
